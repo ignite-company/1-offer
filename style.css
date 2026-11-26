@@ -29,9 +29,9 @@ h1, h2, h3, p { margin-top: 0; }
 .hero-inner { margin-inline: auto; max-width: 1050px; padding: clamp(46px, 8vw, 92px) 28px clamp(58px, 8vw, 100px); }
 .tag { display: inline-flex; gap: 9px; align-items: center; padding: 8px 13px; border: 1px solid #f7574a54; border-radius: 60px; color: #ffb3ae; background: #38151691; margin-bottom: 23px; }
 .tag span { height: 7px; width: 7px; background: var(--red); border-radius: 50%; flex: 0 0 7px; }
-h1 { font-size: clamp(2.45rem, 7.2vw, 5.5rem); line-height: 1.06; letter-spacing: -.045em; font-weight: 850; margin: 0 auto 23px; max-width: 960px; text-wrap: balance; }
+h1 { font-size: clamp(1.05rem, 7vw, 3.85rem); line-height: 1.1; letter-spacing: -.04em; font-weight: 850; margin: 0 auto 23px; max-width: 960px; }
 h1 em { color: var(--red); font-style: normal; }
-.offer-lock { white-space: nowrap; }
+.headline-line { display: block; white-space: nowrap; }
 .lede { font-size: clamp(1rem, 2.1vw, 1.23rem); line-height: 1.64; max-width: 600px; margin: 0 auto; color: #e6dfe0; text-wrap: pretty; }
 .application { max-width: 585px; margin: clamp(35px, 6vw, 55px) auto 0; scroll-margin-top: 26px; }
 .choose { color: #ffaaa5; text-transform: uppercase; margin-bottom: 12px; }
@@ -75,7 +75,6 @@ h1 em { color: var(--red); font-style: normal; }
 @media (max-width: 640px) {
   .shell { width: calc(100% - 44px); }
   .hero-inner { padding-inline: 22px; }
-  h1 { font-size: clamp(2.35rem, 9.3vw, 4.2rem); }
   .answers { gap: 12px; }
   .answers.start button { min-height: 70px; }
   .contact-grid { grid-template-columns: minmax(0, 1fr); }
