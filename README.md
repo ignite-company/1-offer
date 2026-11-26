@@ -11,7 +11,7 @@ Set these production Vercel environment variables and redeploy:
 The funnel refuses to collect submissions until both values are configured. It will only show the booking page after HighLevel accepts the submission. Scheduling itself does not request payment.
 
 ## Checkout and group onboarding
-After the discovery call, Asher sends the approved $1 checkout only to accepted applicants. Configure the payment processor’s successfully-paid redirect to the dedicated HighLevel **group** onboarding booking URL. Do not place checkout or the group calendar on the public application page. Attendees should not be charged at either calendar. The $1 fee does not include ad spend, which is paid directly to Meta; following the initial 30 days, ongoing management is $1,000/month.
+After the discovery call, Asher sends the approved $1 checkout only to accepted applicants. Configure the payment processor’s successfully-paid redirect to the dedicated HighLevel **group** onboarding booking URL. Do not place checkout or the group calendar on the public application page. Attendees should not be charged at either calendar. Cover the full commercial terms on the discovery call before checkout.
 
 ## Run tests
 ```sh

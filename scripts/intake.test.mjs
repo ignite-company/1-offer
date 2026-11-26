@@ -17,7 +17,7 @@ test('intake and routing',async t=>{
   assert.equal((await run({...sample,contact:{...sample.contact,website_fax:'bot'}})).code,400);
   t.mock.method(globalThis,'fetch',async(url,args)=>{
     assert.equal(url.host,'services.leadconnectorhq.com');
-    const p=JSON.parse(args.body);assert.equal(p.phone,'+12015550102');assert.equal(p.work_wanted,'Kitchens and baths');assert.equal(p.meta_budget_ready,'Yes');assert.equal(p.utm_source,'test');assert.equal(p.event_type,'one_dollar_offer_application');
+    const p=JSON.parse(args.body);assert.equal(p.phone,'+12015550102');assert.equal(p.work_wanted,'Kitchens and baths');assert.equal(p.meta_ads_ready,'Yes');assert.equal(p.utm_source,'test');assert.equal(p.event_type,'one_dollar_offer_application');
     return {ok:true};
   });
   const ok=await run();
