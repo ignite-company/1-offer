@@ -56,17 +56,14 @@ h1 em { color: var(--red); font-style: normal; }
 .form-submit { margin-top: 7px; width: 100%; }
 .application #feedback { font-size: .925rem; color: #ffd0ca; margin: 13px 0; line-height: 1.55; }
 .application #feedback:empty { display: none; }
-.included, .path { padding: clamp(46px, 7vw, 83px) 0; border-top: 1px solid var(--line); }
+.included, .proof { padding: clamp(46px, 7vw, 83px) 0; border-top: 1px solid var(--line); }
 .kicker { color: #ff938c; margin-bottom: 12px; }
 .shell h2 { font-size: clamp(1.95rem, 5vw, 3.25rem); line-height: 1.12; letter-spacing: -.043em; margin-bottom: 28px; text-wrap: balance; }
 .deliverables { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
 .deliverables article { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 23px; }
 .symbol { display: inline-block; color: var(--red); font-size: 1.45rem; line-height: 1; margin-bottom: 15px; }
 .shell h3 { margin-bottom: 9px; font-size: 1.08rem; line-height: 1.28; letter-spacing: -.02em; }
-.shell article p, .shell li p { color: var(--muted); line-height: 1.62; margin: 0; }
-.path ol { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; padding: 0; list-style: none; counter-reset: path; margin: 0 0 33px; }
-.path li { border-top: 1px solid #ff514a72; padding-top: 17px; counter-increment: path; }
-.path li::before { content: "0" counter(path); color: var(--red); font-weight: 800; font-size: .88rem; display: block; margin-bottom: 12px; }
+.shell article p { color: var(--muted); line-height: 1.62; margin: 0; }
 .footer { border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding: 25px 0 33px; font-size: .9rem; }
 .trap { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 @media (max-width: 900px) {
@@ -78,7 +75,6 @@ h1 em { color: var(--red); font-style: normal; }
   .answers { gap: 12px; }
   .answers.start button { min-height: 70px; }
   .contact-grid { grid-template-columns: minmax(0, 1fr); }
-  .path ol { grid-template-columns: minmax(0, 1fr); gap: 22px; }
 }
 @media (max-width: 520px) {
   .deliverables { grid-template-columns: minmax(0, 1fr); gap: 13px; }
@@ -94,3 +90,32 @@ h1 em { color: var(--red); font-style: normal; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation: none !important; }
 }
+
+/* Reused client work from the main Ignite funnel. */
+.proof h2 em { color: var(--red); font-style: normal; }
+.proof-row + .proof-row { margin-top: 30px; }
+.proof-row-header { display: flex; align-items: center; justify-content: space-between; column-gap: 15px; margin-bottom: 13px; }
+.proof-row-header h3 { margin: 0; }
+.rail-controls { display: flex; gap: 8px; flex-shrink: 0; }
+.rail-controls button, .proof-dialog button { border: 1px solid var(--line); border-radius: 10px; background: #19191d; min-width: 44px; min-height: 44px; cursor: pointer; }
+.rail-controls button { font-size: 1.65rem; line-height: 1; }
+.proof-rail { display: grid; grid-auto-flow: column; gap: 13px; overflow-x: auto; overscroll-behavior-inline: contain; scroll-snap-type: x mandatory; scrollbar-width: thin; scrollbar-color: #5c4e55 #15151a; list-style: none; margin: 0; padding: 5px 3px 13px; }
+.proof-rail li { min-width: 0; scroll-snap-align: start; }
+.logo-rail { grid-auto-columns: clamp(105px, 25vw, 145px); }
+.logo-rail li { height: 88px; border-radius: 12px; background: #f6f4f3; padding: 11px; }
+.logo-rail img { width: 100%; height: 100%; object-fit: contain; }
+.result-rail { grid-auto-columns: clamp(210px, 69vw, 340px); }
+.result-rail a { display: grid; place-items: center; height: clamp(175px, 48vw, 232px); padding: 9px; border-radius: 14px; border: 1px solid var(--line); background: var(--panel); }
+.result-rail a:focus-visible { outline-offset: -3px; }
+.result-rail img { width: 100%; height: 100%; min-height: 0; object-fit: contain; }
+.proof-note { margin: 16px 0 22px; color: var(--muted); font-size: .88rem; }
+.proof-dialog { width: min(890px, calc(100% - 24px)); max-height: 92dvh; border: 1px solid var(--line); border-radius: 17px; background: #141418; color: var(--fg); padding: clamp(11px, 4vw, 23px); }
+.proof-dialog::backdrop { background: #050508d9; }
+.proof-dialog-header, .proof-dialog-nav { display: flex; align-items: center; gap: 12px; }
+.proof-dialog-header p { margin: 0 auto 0 0; font-size: .92rem; }
+.proof-dialog-header button { font-size: 1.45rem; }
+.proof-dialog-header a { text-underline-offset: 3px; font-size: .9rem; }
+.proof-stage { margin: 14px 0; text-align: center; }
+.proof-stage img { display: block; width: 100%; height: min(62dvh, 580px); object-fit: contain; }
+.proof-dialog-nav { justify-content: space-between; }
+.proof-dialog-nav button { padding: 0 13px; }
