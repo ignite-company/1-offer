@@ -1,0 +1,1 @@
+{"name":"ignite-one-dollar-offer","private":true,"type":"module","scripts":{"test":"node --test scripts/*.test.mjs"}}
