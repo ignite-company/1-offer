@@ -98,16 +98,6 @@ function makeMarquee(rail,speed){
   window.addEventListener('pointercancel',release);
   rail.addEventListener('wheel',()=>{holdUntil=performance.now()+1500;},{passive:true});
 
-  rail.parentElement.querySelectorAll('[data-dir]').forEach(button=>{
-    button.addEventListener('click',()=>{
-      holdUntil=performance.now()+1750;
-      const limit=rail.scrollWidth-rail.clientWidth;
-      const direction=Number(button.dataset.dir);
-      const step=Math.max(originals[0].getBoundingClientRect().width+13,rail.clientWidth*.8);
-      const next=direction>0&&rail.scrollLeft>=limit-3?0:direction<0&&rail.scrollLeft<=3?limit:rail.scrollLeft+direction*step;
-      rail.scrollTo({left:next,behavior:reducedMotion.matches?'instant':'smooth'});
-    });
-  });
   reset();
 }
 

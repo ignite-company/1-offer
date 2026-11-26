@@ -99,9 +99,7 @@ h1 em { color: var(--red); font-style: normal; }
 .proof-row + .proof-row { margin-top: 30px; }
 .proof-row-header { display: flex; align-items: center; justify-content: space-between; column-gap: 15px; margin-bottom: 13px; }
 .proof-row-header h3 { margin: 0; }
-.rail-controls { display: flex; gap: 8px; flex-shrink: 0; }
-.rail-controls button, .proof-dialog button { border: 1px solid var(--line); border-radius: 10px; background: #19191d; min-width: 44px; min-height: 44px; cursor: pointer; }
-.rail-controls button { font-size: 1.65rem; line-height: 1; }
+.proof-dialog button { border: 1px solid var(--line); border-radius: 10px; background: #19191d; min-width: 44px; min-height: 44px; cursor: pointer; }
 .proof-rail { display: grid; grid-auto-flow: column; gap: 13px; overflow-x: auto; overscroll-behavior-inline: contain; scroll-snap-type: x mandatory; scrollbar-width: thin; scrollbar-color: #5c4e55 #15151a; list-style: none; margin: 0; padding: 5px 3px 13px; }
 .proof-rail.is-looping { scroll-snap-type: none; scrollbar-width: none; scroll-behavior: auto; }
 .proof-rail.is-looping::-webkit-scrollbar { display: none; }
